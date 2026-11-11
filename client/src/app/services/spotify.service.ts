@@ -92,7 +92,7 @@ export class SpotifyService {
     var endpoint:string = '/artist-albums/' + encodeURIComponent(artistId);
 
     return this.sendRequestToExpress(endpoint).then((data) => {
-      return data.albums.items.map((album) => {
+      return data.items.map((album) => {
         return new AlbumData(album);
       });
     });
@@ -112,7 +112,7 @@ export class SpotifyService {
     var endpoint:string = '/album-tracks/' + encodeURIComponent(albumId);
 
     return this.sendRequestToExpress(endpoint).then((data) => {
-      return data.tracks.items.map((track) => {
+      return data.items.map((track) => {
         return new TrackData(track);
       });
     });
