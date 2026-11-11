@@ -26,11 +26,7 @@
 		<div class="col-xl-4 col-12">
 			<!--TODO: display artist name-->
 			<h3>{{ artist.name}}'s Top Tracks</h3>
-			<app-track-list
-				[tracks]="topTracks"
-				[hideArtist]="true"
-				[hideAlbum]="true">
-			</app-track-list>
+			<app-track-list [tracks]="topTracks"></app-track-list>
 		</div>
 	</div>
 }

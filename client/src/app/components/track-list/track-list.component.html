@@ -22,10 +22,10 @@
 					<td>
 						<a [routerLink]="['/track', track.id]">{{ track.name }}</a>
 					</td>
-					<td>{{ track.duration }}</td>
+					<td>{{ track.durationStr }}</td>
 					@if(!hideArtist) {
 						<td>
-							<a [routerLink]="['/artist', track.artists[0].id]">{{ track.primaryArtist.name }}</a>
+							<a [routerLink]="['/artist', track.artists[0].id]">{{ track.artists[0].name }}</a>
 						</td>
 					}
 					@if(!hideAlbum) {
